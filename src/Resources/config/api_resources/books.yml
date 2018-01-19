@@ -1,0 +1,23 @@
+'App\Entity\Book':
+    shortName: 'book'
+    description: 'Book resource'
+    itemOperations:
+        get:
+            method: 'GET'
+            path: '/book/{id}'
+    collectionOperations:
+        get:
+            method: 'GET'
+            path: '/books'
+    iri: 'someirischema'
+    attributes: {} # Another random associate array
+    properties: # Here is the mapping for Metadata\Property\ItemMetadata
+        id:
+            description: 'The identifier of the book'
+            readable: true
+            writeable: true
+            readableLink: true
+            writeableLink: true
+            required: true
+            iri: 'http://example.com'
+            identifier: true
